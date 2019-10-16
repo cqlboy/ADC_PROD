@@ -1,6 +1,2 @@
 
-
-
-
-
-empty file1.txt file
+empty file1.txt file in branch1
