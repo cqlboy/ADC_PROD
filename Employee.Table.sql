@@ -11,6 +11,8 @@ GO
 Date  	 Change By	Desc
 -------- -------------	--------------------------------
 20191021 BColson	Added comments section.
+20191021 bcolson	Made this change, use XCOPY from 
+			source to local prod folders
 
 
 *********************************************************/
