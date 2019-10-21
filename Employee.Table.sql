@@ -6,6 +6,15 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
+/*
+********************* History **************************
+Date  	 Change By	Desc
+-------- -------------	--------------------------------
+20191021 BColson	Added comments section.
+
+
+*********************************************************/
+
 CREATE TABLE [dbo].[Employee](
 	[id] [int] NOT NULL,
 	FName varchar(20)
