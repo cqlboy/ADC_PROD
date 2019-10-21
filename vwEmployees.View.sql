@@ -7,6 +7,15 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
+/*
+********************* History **************************
+Date  	 Change By	Desc
+-------- -------------	--------------------------------
+20191021 BColson	Created
+
+
+*********************************************************/
+
 create view [dbo].[vwEmployees] as
 
 
