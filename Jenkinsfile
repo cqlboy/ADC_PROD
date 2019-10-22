@@ -29,7 +29,7 @@ pipeline {
 		cd C:\\Git\\repo\\ADC_PROD
 		git add *.sql
 		git commit -m "commit latest production release" *.sql
-		git push -u origin master
+		git push --force origin master
 		"""
             }
         }
