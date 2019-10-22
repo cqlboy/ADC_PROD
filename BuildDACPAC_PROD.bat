@@ -9,14 +9,14 @@ SET SQLPACKAGE="%SQLDIR%SqlPackage.exe"
 REM C:\Program Files (x86)\Microsoft SQL Server\140\DAC\bin>SqlPackage.exe /a:Publish  /sf:"C:\SQLShackDemo\SQLShackDemo_1.dacpac" /tcs:"Data Source=hqdbt01;Initial Catalog=SQLShackDemo;Integrated Security=SSPI;Persist Security Info=False;"
 
 REM Specify the path of the dacpac files
-SET DATABASEDIR=C:\Git\Development\
+SET DATABASEDIR=\\192.168.1.102\c$\Git\Development\
  
 REM The database for export and import
 SET SRCDATABASENAME=dacpac_db_qa
 SET TGTDATABASENAME=dacpac_db_prod
  
 REM The SQL Server Source instance
-SET SOURCESERVERNAME=192.168.1.101
+SET SOURCESERVERNAME=192.168.1.102
  
 REM The SQL Server target instance
 SET TARGETSERVERNAME=192.168.1.102
@@ -25,6 +25,8 @@ SET TARGETSERVERNAME=192.168.1.102
 REM Get the datetime in a format that can go in a filename.
 For /f "tokens=2-4 delims=/ " %%a in ("%date%") do (set mydate=%%c-%%a-%%b)
 For /f "tokens=1-2 delims=/:" %%a in ("%TIME%") do (set mytime=%%a%%b)
+
+set mytime=%mytime:~1,4%
 echo %mydate%_%mytime%
 
 REM ****** EXTRACT dacpac File *******
