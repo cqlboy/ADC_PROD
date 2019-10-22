@@ -13,20 +13,20 @@ pipeline {
         }
         stage('-- capture obj snapshot--') {
             steps {
-		echo "capture obj level snapshot for before/after comparision"
+		echo "capture obj level snapshot for before after comparision"
             }
         }
         stage('-- XCOPY dev-2-prod changes --') {
             steps {
 		bat """
-		XCOPY C:\Git\REPO\ADC_DEV\*.sql C:\Git\REPO\ADC_PROD /i /d /y /e
+		XCOPY C:\\Git\\REPO\\ADC_DEV\\*.sql C:\\Git\\REPO\\ADC_PROD /i /d /y /e
 		"""
             }
         }
         stage('-- update GIT prod repo --') {
             steps {
 		bat """
-		cd C:\Git\REPO\ADC_PROD
+		cd C:\\Git\\repo\\ADC_PROD
 		git add *.sql
 		git commit -m "commit latest production release" *.sql
 		git push -u origin master
